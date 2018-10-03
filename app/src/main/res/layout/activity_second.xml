@@ -22,7 +22,8 @@
         android:text="@string/to_back"
         android:onClick="onClick"
         tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="6dp" />
+        tools:layout_editor_absoluteY="6dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/city"

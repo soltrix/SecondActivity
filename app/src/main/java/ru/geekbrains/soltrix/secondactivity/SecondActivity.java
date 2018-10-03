@@ -47,6 +47,15 @@ public class SecondActivity extends AppCompatActivity {
         //TextView textView = (TextView) findViewById(R.id.textView);
         //EditText editText = (EditText) findViewById(R.id.editText3);
         city.setText(parcel.text); // Сохранить их в TextView
+
+        if (!parcel.checkSky) {
+            sky.setVisibility(View.GONE);
+        }
+
+        if (!parcel.checkDetails) {
+            detailsText.setVisibility(View.GONE);
+        }
+
         //data.setText(((Integer) parcel.number).toString());
         Toast.makeText(getApplicationContext(),"Second - onCreate()", Toast.LENGTH_SHORT).show();
 

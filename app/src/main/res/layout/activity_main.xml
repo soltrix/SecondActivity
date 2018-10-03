@@ -21,30 +21,88 @@
         android:layout_height="wrap_content"
         android:text="@string/to_second"
         tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="6dp" />
+        tools:layout_editor_absoluteY="6dp"
+        tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/editText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
         android:ems="10"
+        android:hint="@string/city"
         android:inputType="textPersonName"
-        android:text="Name"
         app:layout_constraintBottom_toBottomOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintStart_toEndOf="@+id/button" />
 
-    <EditText
-        android:id="@+id/editText2"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/LayoutSky"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:ems="10"
-        android:inputType="number"
+        android:orientation="horizontal"
+        android:padding="4dp"
         app:layout_constraintStart_toStartOf="@+id/editText"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
+        app:layout_constraintTop_toBottomOf="@+id/editText">
+
+        <TextView
+            android:id="@+id/textViewSky"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="@string/cloudy"
+            android:textSize="18sp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:padding="2dp">
+
+            <CheckBox
+                android:id="@+id/checkBoxSky"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:padding="2dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LayoutDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="4dp"
+        app:layout_constraintStart_toStartOf="@+id/LayoutSky"
+        app:layout_constraintTop_toBottomOf="@+id/LayoutSky">
+
+        <TextView
+            android:id="@+id/textViewDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="@string/detail"
+            android:textSize="18sp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:padding="2dp">
+
+            <CheckBox
+                android:id="@+id/checkBoxDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:padding="2dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
 
 </android.support.constraint.ConstraintLayout>

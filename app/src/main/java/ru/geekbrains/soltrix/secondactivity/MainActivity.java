@@ -7,6 +7,8 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
+
+
 //    @Override
 //    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 //        super.onActivityResult(requestCode, resultCode, data);
@@ -20,10 +22,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         Toast.makeText(getApplicationContext(),"Main - onCreate()", Toast.LENGTH_SHORT).show();
-        Button button = (Button) findViewById(R.id.button);     // Кнопка
+        Button button = findViewById(R.id.button);     // Кнопка
         button.setOnClickListener(new StartSecondActivity(this));   // Обработка нажатий
     }
+
+
 
     @Override
     protected void onStart() {
