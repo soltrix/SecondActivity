@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Погода</string>
-    <string name="city">Выбор города</string>
+    <string name="city">Выберите город</string>
     <string name="last_update">Последнее обновление</string>
     <string name="place_not_found">Извините, нет данных</string>
     <string name="humidity">Влажность</string>

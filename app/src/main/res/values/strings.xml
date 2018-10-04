@@ -1,11 +1,11 @@
 <resources>
-    <string name="app_name">SecondActivity</string>
+    <string name="app_name">Weather</string>
     <string name="activity_main">Activity Main!</string>
     <string name="activity_second">Activity Second!</string>
-    <string name="to_second">Second</string>
+    <string name="ok" translatable="false">OK</string>
     <string name="to_back">Back</string>
     <string name="last_update">Last update</string>
-    <string name="city">City</string>
+    <string name="city">Choose city</string>
     <string name="weather_sunny" translatable="false">&#xf00d;</string>
     <string name="weather_clear_night" translatable="false">&#xf02e;</string>
     <string name="weather_foggy" translatable="false">&#xf014;</string>

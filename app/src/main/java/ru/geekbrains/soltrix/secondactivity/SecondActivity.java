@@ -14,6 +14,7 @@ import org.json.JSONObject;
 import java.text.DateFormat;
 import java.util.Date;
 import java.util.Locale;
+import java.util.Objects;
 
 import static ru.geekbrains.soltrix.secondactivity.StartSecondActivity.TEXT;
 
@@ -32,7 +33,10 @@ public class SecondActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
 
-        Parcel parcel = (Parcel) getIntent().getExtras().getSerializable(TEXT); // получить данные из Intent
+        Parcel parcel = null; // получить данные из Intent
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.KITKAT) {
+            parcel = (Parcel) Objects.requireNonNull(getIntent().getExtras()).getSerializable(TEXT);
+        }
 
         handler = new Handler();
         temp = findViewById(R.id.temperature);

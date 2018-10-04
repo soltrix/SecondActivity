@@ -9,6 +9,7 @@ import android.widget.EditText;
 public class StartSecondActivity implements View.OnClickListener {
 
     public final static String TEXT = "Text";
+    private final static int rCode = 1;
 
     private Activity sourceActivity;
 
@@ -36,6 +37,6 @@ public class StartSecondActivity implements View.OnClickListener {
         intent.putExtra(TEXT, parcel);    // Отправляем посылку
 
         // Возвращаем SecondActivity результат работы MainActivity методом onActivityResult
-        sourceActivity.startActivityForResult(intent, 1);
+        sourceActivity.startActivityForResult(intent, rCode);
     }
 }
