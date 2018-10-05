@@ -7,6 +7,6 @@
     <string name="humidity">Влажность</string>
     <string name="pressure">Давление</string>
 	<string name="cloudy">Выводить облачность</string>
-	<string name="detail">Выводить подробности</string>
+	<string name="details">Выводить подробности</string>
 	
 </resources>

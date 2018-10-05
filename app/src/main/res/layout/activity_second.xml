@@ -31,7 +31,6 @@
         android:layout_height="43dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:text="city"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="@+id/buttonBack"
         app:layout_constraintEnd_toEndOf="parent"
@@ -43,7 +42,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:ems="10"
-        android:text="data"
         app:layout_constraintStart_toStartOf="@+id/city"
         app:layout_constraintTop_toBottomOf="@+id/city" />
 
@@ -57,12 +55,11 @@
         app:layout_constraintTop_toBottomOf="@+id/data" />
 
     <TextView
-        android:id="@+id/details"
+        android:id="@+id/detail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:ems="10"
-        android:text="details"
         app:layout_constraintStart_toStartOf="@+id/sky"
         app:layout_constraintTop_toBottomOf="@+id/sky" />
 
@@ -70,23 +67,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        app:layout_constraintStart_toStartOf="@+id/details"
-        app:layout_constraintTop_toBottomOf="@+id/details">
+        app:layout_constraintStart_toStartOf="@+id/detail"
+        app:layout_constraintTop_toBottomOf="@+id/detail">
 
         <TextView
             android:id="@+id/temperature"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="temperature"/>
+            android:layout_marginTop="8dp"/>
 
         <TextView
             android:id="@+id/gradus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:ems="10"
-            android:text="gradus"/>
+            android:ems="10"/>
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

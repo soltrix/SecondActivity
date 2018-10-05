@@ -28,8 +28,6 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new StartSecondActivity(this));   // Обработка нажатий
     }
 
-
-
     @Override
     protected void onStart() {
         super.onStart();

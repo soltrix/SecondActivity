@@ -14,7 +14,6 @@ import org.json.JSONObject;
 import java.text.DateFormat;
 import java.util.Date;
 import java.util.Locale;
-import java.util.Objects;
 
 import static ru.geekbrains.soltrix.secondactivity.StartSecondActivity.TEXT;
 
@@ -33,10 +32,7 @@ public class SecondActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
 
-        Parcel parcel = null; // получить данные из Intent
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.KITKAT) {
-            parcel = (Parcel) Objects.requireNonNull(getIntent().getExtras()).getSerializable(TEXT);
-        }
+        Parcel parcel = (Parcel) getIntent().getExtras().getSerializable(TEXT); // получить данные из Intent
 
         handler = new Handler();
         temp = findViewById(R.id.temperature);
@@ -44,7 +40,7 @@ public class SecondActivity extends AppCompatActivity {
         sky.setTypeface(Typeface.createFromAsset(getAssets(), "fonts/weather.ttf"));
         gradus = findViewById(R.id.gradus);
         gradus.setText("\u00b0C");
-        detailsText = findViewById(R.id.details);
+        detailsText = findViewById(R.id.detail);
         city = findViewById(R.id.city);
         data = findViewById(R.id.data);
 
